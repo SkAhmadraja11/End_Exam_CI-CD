@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  crms-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: carrental-frontend:latest
+    container_name: carrental_frontend
+    ports:
+      - "3000:80"
+    restart: unless-stopped
